@@ -1,0 +1,199 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+  }
+  
+  .modal {
+    width: 528px;
+    height: 581px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    position: absolute;
+    padding: 40px;
+    left: 50%;
+    top: 50%;
+    background: var(--secondary-white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translate(-50%, -50%)scale(1);
+  }
+  
+  .modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--secondary-text-color);
+  }
+  
+  .close-button {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary-white-color);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+  
+  .close-black {
+  display: block;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    fill: var(--accent-color);
+  }
+  
+  .name-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+  }
+  
+  .name-wrap label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: #757575;
+    margin-bottom: 4px;
+  }
+  
+  .name-wrap svg {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .name-wrap input {
+    width: 100%;
+    height: 40px;
+    padding: 12px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .name-wrap textarea {
+    width: 448px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    outline: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    resize:none
+  }
+  
+  .name-wrap textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  
+  .name-wrap textarea:focus {
+    border: 1px solid var(--accent-color);
+  }
+  
+  .name-wrap input:focus {
+    border: 1px solid var(--accent-color);
+  }
+  
+  .name-wrap input:focus + svg {
+    fill: var(--accent-color);
+  }
+  
+  .icon-wrap {
+    position: relative;
+  }
+  
+  .accept-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .accept-wrap input:checked + .checkbox {
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+  }
+  
+  .accept-wrap label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #757575;
+    cursor: pointer;
+  }
+  
+  .checkbox {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 16px;
+    height: 15px;
+    border-radius: 3px;
+    border: 2px solid var(--secondary-text-color);
+    margin-right: 7px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .contract {
+    color: var(--accent-color);
+  }
+  
+  .btn-submit {
+    display: block;
+    width: 200px;
+    height: 50px;
+    background-color: var(--accent-color);
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--secondary-white-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 10px 52px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  
+  .backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  .no-scroll {
+    overflow: hidden;
+  }
