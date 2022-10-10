@@ -6,15 +6,12 @@
   
   .header-container {
     max-width: 1600px;
-    display: flex;
-    align-items: center;
+    @include center-flex;
   }
   
   .header-content {
+    @include font(700, 26px, 1.1);
     font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.1;
     color: #000000;
     text-decoration: none;
     padding-top: 24px;
@@ -23,12 +20,14 @@
   }
   
   .header-list {
-    display: flex;
-  }
-  
-  .header-item,
-  .header-items {
-    display: block;
+    @include center-flex;
+    li {
+      a {
+        &:hover,&:focus {
+          color: var(--accent-color);
+        }
+      }
+    }
   }
   
   .header-item:not(:first-child),
@@ -37,6 +36,7 @@
   }
   
   .header-link {
+    @include font(500, 14px, 1.14);
     padding-top: 20px;
     padding-bottom: 20px;
     position: relative;
@@ -45,27 +45,28 @@
   
   .current::after {
     content: "";
+    @include size(100%, 4px);
     display: block;
     position: absolute;
     bottom: -11px;
     left: 0;
-    width: 100%;
-    height: 4px;
     background: var(--accent-color);
     border-radius: 2px;
   }
   
   .header-contact {
-    display: flex;
+    @include center-flex;
     margin-left: auto;
+    li {
+      a {
+        &:hover,&:focus {
+          color: var(--accent-color);
+        }
+      }
+    }
   }
   
   .web-content {
-    color: var(--accent-color);
-  }
-  
-  .link:hover,
-  .link:focus {
     color: var(--accent-color);
   }
   
@@ -74,29 +75,23 @@
   }
   
   .link {
-    font-size: 14px;
-    line-height: 1.1;
-    letter-spacing: 0.02em;
     color: var(--secondary-text-color);
     text-decoration: none;
   }
   
   .contacts {
-    font-weight: 500;
+    @include center-flex;
+    @include font(500, 14px, 1.1);
+    letter-spacing: 0.02em;
     color: var(--secondary-gray-color);
     fill: var(--secondary-gray-color);
     font-style: normal;
     text-decoration: none;
     padding-top: 20px;
     padding-bottom: 20px;
-    display: flex;
-    align-items: center;
     transition: color 250ms var(--bezier);
-  }
-  
-  .contacts:hover,
-  .contacts:focus svg {
-    fill: var(--accent-color);
+    &:hover,&:focus {
+    fill: var(--accent-color);}
   }
   
   .header-icons {
@@ -105,9 +100,8 @@
   }
   
   .contact {
-    font-weight: 400;
+    @include font(400, 14px, 1.71);
     color: var(--secondary-gray-color);
-    font-style: normal;
     text-decoration: none;
     transition: color 250ms var(--bezier);
   }

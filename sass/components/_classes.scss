@@ -1,45 +1,40 @@
 .classes-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.1;
-    text-align: center;
-    color: var(--secondary-text-color);
-    margin-bottom: 50px;
-  }
+  @include font(700, 36px, 1.1);
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-bottom: 50px;
+}
   
-  .classes-list {
-    width: 1170px;
-    display: flex;
-    margin: 0 auto;
-  }
+.classes-list {
+  @include center-flex;
+  width: 1170px;
+  margin: 0 auto;
+}
   
-  .classes-item {
-    position: relative;
-  }
+.classes-item {
+  position: relative;
+}
   
-  .classes-item:not(:last-child) {
-    margin-right: 30px;
-  }
+.classes-item:not(:last-child) {
+  margin-right: 30px;
+}
   
-  .classes-box {
-    display: block;
-  }
+.classes-box {
+  display: block;
+}
   
-  .classes-wrap {
-    position: absolute;
-    width: 370px;
-    height: 70px;
-    background: rgba(47, 48, 58, 0.8);
-    bottom: 0;
-    right: 0;
-  }
+.classes-wrap {
+  @include size(370px, 70px);
+  position: absolute;
+  background: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  right: 0;
+}
   
-  .classes-text {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--secondary-white-color);
-    padding-top: 27px;
-  }
+.classes-text {
+  @include font(700, 14px, 1.14);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--secondary-white-color);
+  padding-top: 27px;
+}

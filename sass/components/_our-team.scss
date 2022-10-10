@@ -3,42 +3,34 @@
   }
   
   .team-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.1;
+    @include font(700, 36px, 1.1);
     text-align: center;
     color: var(--secondary-text-color);
     margin-bottom: 50px;
   }
   
   .team-list {
+    @include center-flex;
     width: 1170px;
-    display: flex;
     margin: 0 auto;
   }
   
   .our-team {
-    font-size: 16px;
-    line-height: 1.1;
+    @include font(500, 16px, 1.1);
     color: var(--secondary-text-color);
     margin-bottom: 10px;
   }
   
   .team-list-social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center-flex;
     gap: 10px;
     margin-top: 16px;
   }
   
   .team-social-icons {
-    width: 44px;
-    height: 44px;
+    @include center-flex;
+    @include size(44px, 44px);
     border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
     fill: #afb1b8;
     transition: background-color 250ms var(--bezier);
   }
@@ -50,13 +42,10 @@
   
   .team-social-icons:hover,
   .team-social-icons:focus {
-    width: 44px;
-    height: 44px;
+    @include center-flex;
+    @include size(44px, 44px);
     border-radius: 50%;
     background-color: var(--accent-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     fill:var(--secondary-white-color);
   }
   
@@ -81,8 +70,6 @@
   }
   
   .text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.1;
+    @include font(400, 16px, 1.1);
     color: var(--secondary-gray-color);
   }

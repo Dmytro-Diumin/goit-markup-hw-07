@@ -1,17 +1,14 @@
 .work-title {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
+  @include font(700, 18px, 2);
     letter-spacing: 0.06em;
     color: var(--secondary-text-color);
     margin-bottom: 4px;
   }
   
   .work-list {
+    @include center-flex;
     max-width: 1230px;
-    display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
     margin: 0 auto;
   }
   
@@ -42,14 +39,12 @@
   }
   
   .work-text {
+    @include font(400, 18px, 1.55);
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     padding: 63px 24px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.55;
     background: rgba(33, 150, 243, 0.9);
     color: var(--secondary-white-color);
     transform: translateY(101%);

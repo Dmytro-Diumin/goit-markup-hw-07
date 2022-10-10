@@ -152,7 +152,6 @@ body {
 .contact {
   font-weight: 400;
   color: var(--secondary-gray-color);
-  font-style: normal;
   text-decoration: none;
   transition: color 250ms var(--bezier);
 }

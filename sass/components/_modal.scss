@@ -1,9 +1,8 @@
 .backdrop {
+  @include size(100%, 100%);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     background: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity 2500ms var(--bezier), visibility 2500ms var(--bezier);
@@ -11,11 +10,8 @@
   }
   
   .modal {
-    width: 528px;
-    height: 581px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.16;
+    @include font(400, 12px, 1.16);
+    @include size(528px, 581px);
     letter-spacing: 0.01em;
     position: absolute;
     padding: 40px;
@@ -28,22 +24,17 @@
   }
   
   .modal-title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
+    @include font(700, 20px, 1.15);
     text-align: center;
     color: var(--secondary-text-color);
   }
   
   .close-button {
+    @include center-flex;
+    @include size(30px, 30px);
     position: absolute;
     right: 8px;
     top: 8px;
-    display: flex;
-    width: 30px;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
     background: var(--secondary-white-color);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -68,9 +59,7 @@
   }
   
   .name-wrap label {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.16;
+    @include font(400, 12px, 1.16);
     letter-spacing: 0.01em;
     color: var(--secondary-gray-color);
     margin-bottom: 4px;
@@ -85,8 +74,7 @@
   }
   
   .name-wrap input {
-    width: 100%;
-    height: 40px;
+    @include size(100%, 40px);
     padding: 12px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -96,8 +84,7 @@
   }
   
   .name-wrap textarea {
-    width: 448px;
-    height: 120px;
+    @include size(448px, 120px);
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding: 12px 16px;
@@ -108,9 +95,7 @@
   }
   
   .name-wrap textarea::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.16;
+    @include font(400, 12px, 1.16);
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
   }
@@ -132,9 +117,7 @@
   }
   
   .accept-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center-flex;
     margin-top: 20px;
   }
   
@@ -144,19 +127,14 @@
   }
   
   .accept-wrap label {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    @include font(400, 14px, 1.71);
     color: var(--secondary-gray-color);
     cursor: pointer;
   }
   
   .checkbox {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 16px;
-    height: 15px;
+    @include center-flex;
+    @include size(16px, 15px);
     border-radius: 3px;
     border: 2px solid var(--secondary-text-color);
     margin-right: 7px;
@@ -168,22 +146,15 @@
   }
   
   .btn-submit {
-    display: block;
-    width: 200px;
-    height: 50px;
-    background-color: var(--accent-color);
+    @include center-flex;
+    @include font(700, 16px, 1.87);
+    @include size(200px, 50px);
+    @extend %button;
     border: none;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
     color: var(--secondary-white-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
     padding: 10px 52px;
-    cursor: pointer;
     margin: 0 auto;
     margin-top: 30px;
   }
