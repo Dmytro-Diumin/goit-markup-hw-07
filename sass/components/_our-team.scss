@@ -1,67 +1,67 @@
 .team {
     background-color: #f5f4fa;
+
+    &-title {
+      @include font(700, 36px, 1.1);
+      text-align: center;
+      color: var(--secondary-text-color);
+      margin-bottom: 50px;
+    }
+
+    &-list {
+      @include center-flex;
+      width: 1170px;
+      margin: 0 auto;
+    }
+
+    &-list-social {
+      @include center-flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    &-social-icons {
+      @include center-flex;
+      @include size(44px, 44px);
+      border-radius: 50%;
+      fill: #afb1b8;
+      transition: background-color 250ms var(--bezier);
+    }
+
+    &-social-icons:hover,
+    &-social-icons:focus {
+      @include center-flex;
+      @include size(44px, 44px);
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      fill:var(--secondary-white-color);
+    }
+
+    &-item {
+      background-color: var(--secondary-white-color);
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+    }
+
+    &-item:not(:first-child) {
+      margin-left: 30px;
+    }
+
+    &-card {
+      display: block;
+    }
   }
-  
-  .team-title {
-    @include font(700, 36px, 1.1);
-    text-align: center;
-    color: var(--secondary-text-color);
-    margin-bottom: 50px;
-  }
-  
-  .team-list {
-    @include center-flex;
-    width: 1170px;
-    margin: 0 auto;
-  }
-  
+
   .our-team {
     @include font(500, 16px, 1.1);
     color: var(--secondary-text-color);
     margin-bottom: 10px;
   }
   
-  .team-list-social {
-    @include center-flex;
-    gap: 10px;
-    margin-top: 16px;
-  }
-  
-  .team-social-icons {
-    @include center-flex;
-    @include size(44px, 44px);
-    border-radius: 50%;
-    fill: #afb1b8;
-    transition: background-color 250ms var(--bezier);
-  }
-  
   .social-icons {
     width: 20px;
     transition: fill 250ms var(--bezier);
-  }
-  
-  .team-social-icons:hover,
-  .team-social-icons:focus {
-    @include center-flex;
-    @include size(44px, 44px);
-    border-radius: 50%;
-    background-color: var(--accent-color);
-    fill:var(--secondary-white-color);
-  }
-  
-  .team-item {
-    background-color: var(--secondary-white-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-  }
-  
-  .team-item:not(:first-child) {
-    margin-left: 30px;
-  }
-  
-  .team-card {
-    display: block;
   }
   
   .cards {

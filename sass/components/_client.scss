@@ -1,16 +1,17 @@
-.client-title {
-  @include font(700, 36px, 1.1);
+.client {
+  &-title {
+    @include font(700, 36px, 1.1);
     text-align: center;
     color: var(--secondary-text-color);
     margin-bottom: 50px;
   }
-  
-  .client-list {
+
+  &-list {
     @include center-flex;
     gap: 30px;
   }
-  
-  .client-icon {
+
+  &-icon {
     @include center-flex;
     @include size(170px, 92px);
     border: 1px solid #afb1b8;
@@ -18,14 +19,15 @@
     fill: #afb1b8;
     transition: border 250ms var(--bezier);
   }
-  
-  .client-icons {
+
+  &-icons {
     @include size(106px, 60px);
     transition: fill 250ms var(--bezier);
   }
-  
-  .client-icon:hover,
-  .client-icon:focus {
+
+  &-icon:hover,
+  &-icon:focus {
     border-color: var(--accent-color);
     fill: var(--accent-color);
   }
+}
