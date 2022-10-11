@@ -85,6 +85,10 @@
       fill: var(--secondary-white-color);
     }
   }
+
+  .social-icons {
+    width: 20px;
+  }
   
   .address {
     @include font(400, 14px, 1.7);
