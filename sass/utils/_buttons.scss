@@ -23,15 +23,15 @@
     margin-left: 12px;
     padding: 10px 62px 10px 28px;
     position: relative;
+
+    & svg {
+      position: absolute;
+      top: 50%;
+      right: 28px;
+      transform: translateY(-50%);
+    }
   }
   
-  .btn-sign-up svg {
-    position: absolute;
-    top: 50%;
-    right: 28px;
-    transform: translateY(-50%);
-  }
-
   .button {
     max-width: 1230px;
     margin: 0 auto;
@@ -55,14 +55,7 @@
 
   }
   
-  .btn:hover,
-  .btn:focus {
-    color: var(--secondary-white-color);
-    background-color: var(--accent-color);
-    border: none;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-  }
+  
   
   .btn {
     @include font(500, 16px, 1.6);
@@ -73,6 +66,15 @@
     cursor: pointer;
     padding: 6px 22px;
     transition: color 250ms var(--bezier),background-color 250ms var(--bezier),box-shadow 250ms var(--bezier);
+
+    &:hover,
+    &:focus {
+      color: var(--secondary-white-color);
+      background-color: var(--accent-color);
+      border: none;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
   }
 
   .close-button {
@@ -87,17 +89,17 @@
     padding: 0;
     transition: fill 250ms var(--bezier);
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
   }
   
   .close-black {
   display: block;
   }
   
-  .close-button:hover,
-  .close-button:focus {
-    fill: var(--accent-color);
-  }
-
   .btn-submit {
     @include center-flex;
     @include font(700, 16px, 1.87);
